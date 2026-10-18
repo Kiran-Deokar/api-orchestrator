@@ -2,7 +2,7 @@
   "name": "@api-orchestrator/react",
   "version": "1.0.0",
   "description": "React integration for api-orchestrator – hooks, provider, and status management",
-  "author": "api-orchestrator contributors",
+  "author": "Kiran-Deokar",
   "license": "MIT",
   "keywords": [
     "api-orchestrator",

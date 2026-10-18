@@ -2,7 +2,7 @@
   "name": "api-orchestrator",
   "version": "1.0.0",
   "description": "A comprehensive, configurable API infrastructure toolkit for frontend applications. Configure once. Use everywhere.",
-  "author": "api-orchestrator contributors",
+  "author": "Kiran-Deokar",
   "license": "MIT",
   "keywords": [
     "api",
@@ -21,11 +21,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/api-orchestrator/api-orchestrator.git"
+    "url": "https://github.com/Kiran-Deokar/api-orchestrator.git"
   },
-  "homepage": "https://api-orchestrator.dev",
+  "homepage": "https://api-orchestrator-beige.vercel.app",
   "bugs": {
-    "url": "https://github.com/api-orchestrator/api-orchestrator/issues"
+    "url": "https://github.com/Kiran-Deokar/api-orchestrator/issues"
   },
   "main": "./dist/cjs/index.js",
   "module": "./dist/index.js",

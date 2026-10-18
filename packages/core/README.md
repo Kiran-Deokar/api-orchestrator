@@ -175,3 +175,9 @@ const api = createApiClient({
 ## License
 
 MIT
+
+## Documentation
+
+- **Full docs (website):** https://api-orchestrator-beige.vercel.app/
+- **Complete guide (Markdown):** [GUIDE.md](https://github.com/Kiran-Deokar/api-orchestrator/blob/main/GUIDE.md)
+- **Repository:** https://github.com/Kiran-Deokar/api-orchestrator
