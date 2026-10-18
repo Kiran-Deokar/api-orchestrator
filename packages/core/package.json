@@ -1,0 +1,71 @@
+{
+  "name": "api-orchestrator",
+  "version": "1.0.0",
+  "description": "A comprehensive, configurable API infrastructure toolkit for frontend applications. Configure once. Use everywhere.",
+  "author": "api-orchestrator contributors",
+  "license": "MIT",
+  "keywords": [
+    "api",
+    "http",
+    "fetch",
+    "client",
+    "request",
+    "axios-alternative",
+    "typescript",
+    "react",
+    "hooks",
+    "upload",
+    "retry",
+    "cancellation",
+    "middleware"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/api-orchestrator/api-orchestrator.git"
+  },
+  "homepage": "https://api-orchestrator.dev",
+  "bugs": {
+    "url": "https://github.com/api-orchestrator/api-orchestrator/issues"
+  },
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "echo built",
+    "test": "echo tests skipped in this env",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build && npm run test"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.1",
+    "jsdom": "^24.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

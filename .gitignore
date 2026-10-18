@@ -1,0 +1,15 @@
+node_modules/
+dist/
+*.tgz
+*.log
+.DS_Store
+coverage/
+.turbo/
+.vite/
+*.tsbuildinfo
+.env
+.env.local
+.idea/
+.vscode/
+apps/docs/dist/
+packages/*/dist/
