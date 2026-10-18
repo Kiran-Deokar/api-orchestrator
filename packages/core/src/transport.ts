@@ -1,5 +1,4 @@
 import type {
-  ProgressEvent,
   ResolvedRequestConfig,
   TransportAdapter,
   TransportResponse,
@@ -54,10 +53,15 @@ export class FetchTransport implements TransportAdapter {
     }
 
     // Prefer AbortSignal.any when available so both user abort and timeout work
-    const signal: AbortSignal =
-      config.signal && typeof AbortSignal.any === 'function'
-        ? AbortSignal.any([config.signal, timeoutController.signal])
-        : timeoutController.signal;
+       const AbortSignalAny = (
+          AbortSignal as typeof AbortSignal & {
+            any?: (signals: AbortSignal[]) => AbortSignal;
+          }
+        ).any;
+        const signal: AbortSignal =
+          config.signal && typeof AbortSignalAny === 'function'
+            ? AbortSignalAny([config.signal, timeoutController.signal])
+            : timeoutController.signal;
 
     try {
       const response = await fetch(config.url, {

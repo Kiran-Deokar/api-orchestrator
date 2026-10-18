@@ -13,7 +13,6 @@ import {
   ApiError,
   createHttpError,
   isApiCancellationError,
-  isApiError,
   normalizeError,
 } from './errors';
 import { applyAuth, coordinatedRefresh } from './auth';
@@ -93,7 +92,6 @@ export class ApiClient implements ApiClientLike {
     const start = Date.now();
     const requestId = requestConfig.requestId || generateRequestId();
     let attempt = 0;
-    let lastError: ApiError | undefined;
 
     const retryConfig = resolveRetryConfig(
       this.config.retry,
@@ -156,7 +154,6 @@ export class ApiClient implements ApiClientLike {
         return result;
       } catch (err) {
         const error = normalizeError(err, config, requestId);
-        lastError = error;
 
         // Status handlers
         if (
